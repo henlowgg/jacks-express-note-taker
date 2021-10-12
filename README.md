@@ -45,4 +45,9 @@
 - [Github Profile](https://github.com/henlowgg)
 
 ## Email:
-    For any other questions you might have please reach out to me via E-mail at: henlowgg@outlook.com.
+    For any other questions you might have please reach out to me via E-mail at: henlowgg@outlook.com
+
+
+![plot](../assets/note-taker.png)
+
+![plot](../assets/note-taker-2.png)
