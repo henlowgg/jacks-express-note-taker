@@ -18,7 +18,9 @@
 
     The applications is used to write and save notes, it uses an express.js back end and retrieves note data from a JSON file.
 ## Installation:
-    Follow the deployed application via Heroku link to utilize the app. (https://jacks-express-note-taker.herokuapp.com/)
+    Follow the deployed application via Heroku link to utilize the app.
+
+- [Installation](https://jacks-express-note-taker.herokuapp.com/)
 
 ## Usage
     Simply click on the link and navigate to the page and begin taking notes, you can click the floppy disk save icon to save the note.
