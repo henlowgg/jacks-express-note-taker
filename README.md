@@ -20,7 +20,7 @@
 ## Installation:
     Follow the deployed application via Heroku link to utilize the app.
 
-- [Installation](https://jacks-express-note-taker.herokuapp.com/)
+- [HEROKU APP LINK](https://jacks-express-note-taker.herokuapp.com/)
 
 ## Usage
     Simply click on the link and navigate to the page and begin taking notes, you can click the floppy disk save icon to save the note.
