@@ -48,6 +48,6 @@
     For any other questions you might have please reach out to me via E-mail at: henlowgg@outlook.com
 
 
-![plot](..\assets\note-taker.png)
+![note-taker](https://github.com/henlowgg/jacks-express-note-taker/blob/main/Assets/note-taker.png?raw=true)
 
-![plot](..\assets\note-taker-2.png)
+![note-taker-2](https://github.com/henlowgg/jacks-express-note-taker/blob/main/Assets/note-taker-2.png?raw=true)
