@@ -1,25 +1,27 @@
+const fs = require("fs");
+const uuid = require("uuid");
 const router = require("express").Router();
-const fs = require('fs');
-const path = require('path');
 
-// when trying to do a get request it should return notes from the database
-router.get("/api/notes", (req, res) => {
-    fs.readFile("./db/db.json", function (err, data) {
-        const parsedData = JSON.parse(data)
-        res.json(parsedData)
-    })
+router.get("/notes", (req, res) => {
+    const data = fs.readFileSync("./db/db.json");
+    res.json(JSON.parse(data));
 })
 
-// the post request is going to add notes to the database hopefully if the stars align
-router.post("/api/notes", (req, res) => {
-    fs.readFile("./db/db.json", function (err, data) {
-        const parsedData = JSON.parse(data)
-        const newData = req.body
-        parsedData.push(newData)
-        fs.writeFile("./db/db.json", JSON.stringify(parsedData), function (err) {
-            res.json(parsedData)
-        })
-    })
+router.post("/notes", (req, res) => {
+    const notes = JSON.parse(fs.readFileSync("./db/db.json"));
+    const addNote = req.body;
+    addNote.id = uuid.v4();
+    notes.push(addNote);
+    fs.writeFileSync("./db/db.json", JSON.stringify(notes));
+    res.json(notes);
 })
 
-module.exports = router
+router.delete("/notes/:id", (req, res) => {
+    const notes = JSON.parse(fs.readFileSync("./db/db.json"));
+    const eraseNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
+    fs.writeFileSync("./db/db.json", JSON.stringify(eraseNote));
+    
+    res.json(eraseNote);
+})
+
+module.exports = router;
